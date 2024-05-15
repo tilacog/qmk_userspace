@@ -30,10 +30,10 @@ enum layer_names {
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_BASE] = LAYOUT_split_3x6_5(
-        QK_GESC,  KC_Q  ,  KC_D  , KC_R   , KC_W   ,  KC_B  ,           KC_J   , KC_F   ,  KC_U   , KC_P  , KC_SCLN, _______,
-        KC_BSPC,  HR_LGI,  HR_LAL, HR_LSH , HR_LCT ,  KC_G  ,           KC_Y   , HR_RCT ,  HR_RSH , HR_RAL, HR_RGI , KC_QUOTE,
-        _______,  KC_Z  ,  KC_X  , KC_M   , LALTGR ,  KC_V  ,           KC_K   , RALTGR ,  KC_COMM, KC_DOT, KC_SLSH, _______,
-                    OSM(MOD_HYPR), KC_TAB , SPC_SYM,  ENT_FUN,          ENT_NMP, SPC_SYM,  KC_PGUP, KC_PGDN
+        QK_GESC,  KC_Q  ,  KC_D  , KC_R   , KC_W   , KC_B   ,         KC_J   , KC_F   ,  KC_U   , KC_P  , KC_SCLN, _______,
+        KC_BSPC,  HR_LGI,  HR_LAL, HR_LSH , HR_LCT , KC_G   ,         KC_Y   , HR_RCT ,  HR_RSH , HR_RAL, HR_RGI , KC_QUOTE,
+        _______,  KC_Z  ,  KC_X  , KC_M   , LALTGR , KC_V   ,         KC_K   , RALTGR ,  KC_COMM, KC_DOT, KC_SLSH, _______,
+                    OSM(MOD_HYPR), KC_TAB , ENT_FUN, SPC_SYM,         SPC_SYM, ENT_NMP,  KC_PGUP, KC_PGDN
 
     ),
 
