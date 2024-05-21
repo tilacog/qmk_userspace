@@ -32,11 +32,13 @@ EOF
     echo "$eeprom_reset_file"
 }
 
-# Wait for user confirmation to continue
-wait_for_user_input() {
-    echo "RESET the device and then press ENTER to continue with flashing the firmware..."
-    read -r  # Wait for user to press enter
-    sleep .75
+wait_for_reset() {
+    echo "Device reset initiated. Continuing with flashing after 5 seconds..."
+
+    for ((i = 5; i > 0; i--)); do
+        echo "Waiting for $i seconds..."
+        sleep 1
+    done
 }
 
 # Flash the device with the firmware and EEPROM reset file
@@ -52,7 +54,7 @@ main() {
     backup_hex_files
     compile_firmware
     eeprom_file=$(prepare_eeprom_reset)
-    wait_for_user_input
+    wait_for_reset
     flash_firmware "$eeprom_file"
 }
 
